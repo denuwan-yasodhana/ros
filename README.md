@@ -4,6 +4,6 @@
 ## Robot Algorithms
 ## Interprocess Communication
 
-[- General Theory](https://linktodocumentation)
+- [General Theory](https://linktodocumentation)
 
 ## Third-party libraries
