@@ -13,18 +13,13 @@ After creating package then change `package.xml` file details
 
 In `CMakeList.txt` file change, Check
 
-    - project(name)  
-	- find_package()							-> add build system and dependencies 			# components of package required
-	- add_message_files() / add_action_files() / add_service_files()	-> add .msg file					# Declaration
-	- generate_messages()							-> enable function					# Message dependency 
-	- catkin_package()							-> enable function
-	- include directories()							-> enable function
+        - project(name)                                                     # If you changed the project name in the `package.xml` file, change it here as well. 
+	- find_package()                                                    # Check or Add has required build system and all dependencies 
+	- add_message_files() / add_action_files() / add_service_files()    # Declaration .msg or .srv or .action file
+	- generate_messages()					   	    # Enable Message dependency 
+	- catkin_package()		                                    # Enable function
+	- include directories()						    # Enable function
 
-	- add_executable()		# for publisher
-	- add_dependencies()		# for publisher 
-	- target_link_libraries()	# for publisher
-
-	- add_executable()		# for subscriber
-	- add_dependencies()		# for subscriber
-	- target_link_libraries()	# for subscriber
-
+	### If Publisher & Subscriber nodes
+	
+	-
