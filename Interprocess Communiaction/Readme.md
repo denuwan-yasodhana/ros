@@ -1,6 +1,6 @@
 # Step by Step
 
-## In package.xml file
+## Step 01 : In package.xml file
 
 After creating package then change `package.xml` file details		
 
@@ -9,7 +9,7 @@ After creating package then change `package.xml` file details
         <build_depend>        # Check build dependent packages
         <run_depend>          # Check runtime dependent packages
 
-## In CMakeList.txt file
+## Step 02 : In CMakeList.txt file
 
 In `CMakeList.txt` file change, Check
 
