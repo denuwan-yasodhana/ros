@@ -1,5 +1,3 @@
-# Step by Step
-
 ## Step 01 : In package.xml file
 
 After creating package then change `package.xml` file details		
@@ -13,13 +11,68 @@ After creating package then change `package.xml` file details
 
 In `CMakeList.txt` file change, Check
 
-        project(name)                                                     # If you changed the project name in the `package.xml` file, change it here as well. 
-	find_package()                                                    # Check or Add has required build system and all dependencies 
-	add_message_files() / add_action_files() / add_service_files()    # Declaration .msg or .srv or .action file
-	generate_messages()					   	    # Enable Message dependency 
-	catkin_package()		                                    # Enable function
-	include directories()						    # Enable function
+        project(name)                                                     	# If you changed the project name in the `package.xml` file, change it here as well. 
+	find_package()                                                    	# Check or Add has required build system and all dependencies (Action has 2 find_package() to enable)
+	add_message_files() / add_action_files() / add_service_files()    	# Declaration .msg or .srv or .action file
+	generate_messages()					   	    	# Enable Message dependency 
+	catkin_package()		                                    	# Enable function
+	include directories()						    	# Enable function
 
 	##### If Publisher & Subscriber nodes
+	
+	add_executable()													# for publisher
+	add_dependencies(publisher_node_name ${publisher_node_name_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})		# for publisher 
+	target_link_libraries()													# for publisher
+
+	add_executable()													# for subscriber
+	add_dependencies(subscriber_node_name ${subscriber_node_name_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})		# for subscriber
+	target_link_libraries()													# for subscriber
+	
+	##### If Client & Server nodes
+	
+	add_executable()													# for server
+	add_dependencies(server_node_name ${server_node_name_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})			# for server 
+	target_link_libraries()													# for server
+
+	add_executable()													# for client
+	add_dependencies(client_node_name ${client_node_name_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})			# for client
+	target_link_libraries()													# for client
+	
+	##### If Action Client & Action Server nodes
+	
+	add_executable()													# for action server
+	add_dependencies(server_node_name ${server_node_name_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})			# for action server 
+	target_link_libraries()													# for action server
+
+	add_executable()													# for action client
+	add_dependencies(client_node_name ${client_node_name_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})			# for action client
+	target_link_libraries()													# for action client
+	
+	
+## Step 03 : In message / service / action file
+
+Data types : ‘bool’, ‘int8’, ‘int16’, ‘float32’, ‘string’, ‘time’, ‘duration’, and ‘common_msgs'
+
+##### Message.msg
+
+	time stamp
+	int32 data
+	
+##### Service.srv
+
+	int64 a 			# Service request
+	int64 b 
+	---
+	int64 result			# Service response
+	
+##### Action.action
+
+	
+	int32 order			# Action request
+	---
+	int32[] sequence		# Action response
+	---
+	int32[] sequence		# Action feedback
+	
 	
 	
