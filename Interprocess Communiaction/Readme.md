@@ -1,3 +1,23 @@
+## Step 01 : Basic Setup
+
+i. Create `workspace` and `src` folder
+
+	cd ~/catkin_ws/src
+
+ii. Go to src and initialize workspace
+
+	catkin_init_workspace
+	
+iii. Go back and build Catkin build system
+
+	catkin_make
+	
+iv. Go to src and create package with dependent packages(roscpp, rospy, std_msgs, message_generation)
+
+	catkin_create_pkg [PACKAGE_NAME] [DEPENDENT_PACKAGE_1] [DEPENDENT_PACKAGE_N]
+	
+v. Go to package src, and make a `node`
+
 ## Step 01 : In package.xml file
 
 After creating package then change `package.xml` file details		
