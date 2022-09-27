@@ -71,7 +71,7 @@ In `CMakeList.txt` file change, Check
 	
 ## Step 04 : In message / service / action file
 
-Data types : ‘bool’, ‘int8’, ‘int16’, ‘float32’, ‘string’, ‘time’, ‘duration’, and ‘common_msgs'
+Data types : ‘bool’, ‘int8’, ‘int16’, 'int32', 'int64', ‘float32’, 'float64', ‘string’, ‘time’, ‘duration’
 
 ##### Message.msg
 
