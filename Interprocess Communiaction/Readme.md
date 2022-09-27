@@ -1,24 +1,24 @@
 ## Step 01 : Basic Setup
 
-i. Create `workspace` and `src` folder
+- Create `workspace` and `src` folder
 
-	cd ~/catkin_ws/src
+		cd ~/catkin_ws/src
 
-ii. Go to src and initialize workspace
+- Go to src and initialize workspace
 
-	catkin_init_workspace
+		catkin_init_workspace
 	
-iii. Go back and build Catkin build system
+- Go back and build Catkin build system
 
-	catkin_make
+		catkin_make
 	
-iv. Go to src and create package with dependent packages(roscpp, rospy, std_msgs, message_generation)
+- Go to src and create package with dependent packages(roscpp, rospy, std_msgs, message_generation)
 
-	catkin_create_pkg [PACKAGE_NAME] [DEPENDENT_PACKAGE_1] [DEPENDENT_PACKAGE_N]
+		catkin_create_pkg [PACKAGE_NAME] [DEPENDENT_PACKAGE_1] [DEPENDENT_PACKAGE_N]
 	
-v. Go to package src, and make a `node`
+- Go to package src, and make a `node`
 
-## Step 01 : In package.xml file
+## Step 02 : In package.xml file
 
 After creating package then change `package.xml` file details		
 
@@ -27,7 +27,7 @@ After creating package then change `package.xml` file details
         <build_depend>        # Check build dependent packages
         <run_depend>          # Check runtime dependent packages
 
-## Step 02 : In CMakeList.txt file
+## Step 03 : In CMakeList.txt file
 
 In `CMakeList.txt` file change, Check
 
@@ -69,7 +69,7 @@ In `CMakeList.txt` file change, Check
 	target_link_libraries()													# for action client
 	
 	
-## Step 03 : In message / service / action file
+## Step 04 : In message / service / action file
 
 Data types : ‘bool’, ‘int8’, ‘int16’, ‘float32’, ‘string’, ‘time’, ‘duration’, and ‘common_msgs'
 
@@ -93,6 +93,32 @@ Data types : ‘bool’, ‘int8’, ‘int16’, ‘float32’, ‘string’, �
 	int32[] sequence		# Action response
 	---
 	int32[] sequence		# Action feedback
+	
+## Step 05 : Finally, run Nodes
+
+- Open 	`first terminal` 
+	
+		source /opt/ros/noetic/setup.bash
+		Go to workspace then, catkin_make
+
+i. Check configuration output files in /build
+ii. Check executable files in /devel/lib/package_name
+iii. Check message header files in /devel/include/package_name
+
+- Open `second terminal`
+
+		roscore
+		
+- Open `third terminal`
+
+		source /opt/ros/noetic/setup.bash
+		Go to workspace then, source devel/setup.bash
+		rosrun package_name Publisher_node_name
+		
+- Open `first terminal`
+		
+		source devel/setup.bash
+		rosrun package_name Subscriber_node_name
 	
 	
 	
