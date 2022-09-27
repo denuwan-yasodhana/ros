@@ -102,7 +102,9 @@ Data types : ‘bool’, ‘int8’, ‘int16’, ‘float32’, ‘string’, �
 		Go to workspace then, catkin_make
 
 i. Check configuration output files in /build
+
 ii. Check executable files in /devel/lib/package_name
+
 iii. Check message header files in /devel/include/package_name
 
 - Open `second terminal`
