@@ -14,3 +14,7 @@ while not rospy.is_shutdown():						// function will return True if the node is 
 	pub.publish(count)
 	count += 1
 	rate.sleep()
+
+	
+	
+	
