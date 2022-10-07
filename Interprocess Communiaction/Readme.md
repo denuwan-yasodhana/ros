@@ -21,7 +21,7 @@
 		- [Publisher Node](https://github.com/denuwan-yasodhana/ros/blob/main/Interprocess%20Communiaction/Publisher_C%2B%2B.cpp)
 		- [Subscriber Node](https://github.com/denuwan-yasodhana/ros/blob/main/Interprocess%20Communiaction/Subscriber_C%2B%2B.cpp)
 	- Python
-		- [Publisher Node](https://github.com/denuwan-yasodhana/ros/blob/main/Interprocess%20Communiaction/Publisher_C%2B%2B.cpp)
+		- [Publisher Node](https://github.com/denuwan-yasodhana/ros/blob/main/Interprocess%20Communiaction/Publisher_python.py)
 
 ## Step 02 : In package.xml file
 
