@@ -16,7 +16,7 @@
 
 		catkin_create_pkg [PACKAGE_NAME] [DEPENDENT_PACKAGE_1] [DEPENDENT_PACKAGE_N]
 
-- Go to package src, and make a `node`
+- Go to package src, and make a `node` [set permission => chmod u+x publisher.py]
 	- C++
 		- [Publisher Node](https://github.com/denuwan-yasodhana/ros/blob/main/Interprocess%20Communiaction/Publisher_C%2B%2B.cpp)
 		- [Subscriber Node](https://github.com/denuwan-yasodhana/ros/blob/main/Interprocess%20Communiaction/Subscriber_C%2B%2B.cpp)
